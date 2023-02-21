@@ -28,5 +28,68 @@ inquirer
             name: 'mgrOfficeNumber',
             message: 'Enter team manager office number',
         },
+        {
+            type: 'list',
+            name: 'empRole',
+            message: 'Select team member role',
+            choices: ['Engineer','Intern'],
+        },
     ])
+
+    .then (answers =>{
+        const empRole=answers.empRolegit
+        switch(empRole) {
+            case 'Engineer':
+                inquirer.prompt([
+                    {
+                        type: 'input',
+                        name: 'engName',
+                        message: 'Enter engineer name',
+                    },
+                    {
+                        type: 'input',
+                        name: 'engId',
+                        message: 'Enter engineer employee ID',
+                    },
+                    {
+                        type: 'input',
+                        name: 'engEmail',
+                        message: 'Enter engineer email',
+                    },
+                    {
+                        type: 'input',
+                        name: 'engGithub',
+                        message: 'Enter engineer github',
+                    },
+                ])
+
+                case 'Intern':
+                    inquirer.prompt([
+                        {
+                            type: 'input',
+                            name: 'intName',
+                            message: 'Enter intern name',
+                        },
+                        {
+                            type: 'input',
+                            name: 'intId',
+                            message: 'Enter intern employee ID',
+                        },
+                        {
+                            type: 'input',
+                            name: 'internEmail',
+                            message: 'Enter engineer email',
+                        },
+                        {
+                            type: 'input',
+                            name: 'intSchool',
+                            message: 'Enter intern school',
+                        }
+                    ])
+                }
+        
+        inquirer.prompt([
+
+        ])
+    })
 
