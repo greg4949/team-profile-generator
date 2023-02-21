@@ -1,9 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Employee = require ('./lib/employee.js');
-const Manager= require ('./lib/manager.js');
-const Engineer = require ('./lib/engineer.js');
-const intern = require ('./lib/intern.js');
+const Employee = require ('./lib/employee.js').default;
+const Manager= require ('./lib/manager.js').default;
+const Engineer = require ('./lib/engineer.js').default;
+const intern = require ('./lib/intern.js').default;
+
 
 inquirer
     .prompt([
@@ -28,3 +29,4 @@ inquirer
             message: 'Enter team manager office number',
         },
     ])
+
