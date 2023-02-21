@@ -37,7 +37,7 @@ inquirer
     ])
 
     .then (answers =>{
-        const empRole=answers.empRolegit
+        const empRole=answers.empRole
         switch(empRole) {
             case 'Engineer':
                 inquirer.prompt([
@@ -61,7 +61,8 @@ inquirer
                         name: 'engGithub',
                         message: 'Enter engineer github',
                     },
-                ])
+                ]);
+                break;
 
                 case 'Intern':
                     inquirer.prompt([
@@ -85,11 +86,9 @@ inquirer
                             name: 'intSchool',
                             message: 'Enter intern school',
                         }
-                    ])
-                }
-        
-        inquirer.prompt([
+                    ]);
+                    break;
+        }
 
-        ])
     })
 
